@@ -16,6 +16,9 @@ jobs:
   sbom-and-scan:
     name: Generate SBOM & scan vulnerabilities
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
